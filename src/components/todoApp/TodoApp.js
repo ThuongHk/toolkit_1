@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 function TodoApp(props) {
     const dispatch = useDispatch()
-    const [addTodoInput, setAddTodoInput] = useState()
+    const [addTodoInput, setAddTodoInput] = useState('')
     const data1 = useSelector((state) => state.todoApp)
     // const data = useSelector(state => state.search.search)
     console.log(data1);
@@ -25,8 +25,9 @@ function TodoApp(props) {
     }
     return (
         <div>
+             <b>Thêm công việc: </b><br></br>
             <form onSubmit={handleSubmit}>
-                <b>Thêm công việc: </b><br></br>
+               
                 <input type='text' value={addTodoInput} onChange={handleOnchangeAddTodo} />
                 <button type='submit'>Thêm</button>
             </form>
