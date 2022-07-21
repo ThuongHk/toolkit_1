@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux';
 import searchSlice from './searchSlice';
 
 function Search(props) {
-    const [searchTodo, setSearchTodo] = useState()
+    const [searchTodo, setSearchTodo] = useState('')
     const dispatch = useDispatch();
 
     const handleOnchange = (e)=>{
